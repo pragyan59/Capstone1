@@ -1,0 +1,55 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Movie Page{% endblock %}
+{% block content %}
+<div class="row">
+	<div class="col-sm-6">
+		<h1 class="monospace">
+			{{ movie.name }}
+		</h1>
+		<p class="subtitle">
+			ID: {{ movie.id }}
+		</p>
+		<div class="genre">
+			<span class="genre">{{ movie.genre }}</span>
+		</div>
+		<div class="director">
+			<span class="director"><strong>Director:</strong> {{ movie.director }}</span>
+		</div>
+		<div class="release_year">
+			<span class="release_year"><strong>Release Year:</strong> {{ movie.release_year }}</span>
+		</div>
+		<div class="rating"><strong>Rating:</strong> {{ movie.rating }} </div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-6">
+		<h2 class="monospace">Movie cast</h2>
+		{% for actor in movie.cast %}
+		<div class="cast">
+			<h5><a href="/actors/{{actor.id}}">{{actor.name}}</a></h5>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+
+	<section>
+		<div class = "row">
+		<div class="col-sm-6">
+			<button>
+				<a href="{{ url_for('update_movie_form', movie_id=movie.id) }}">
+			    Edit project
+			  	</a>
+			</button> 
+			<button>
+				<a href="{{ url_for('delete_movie', movie_id=movie.id) }}">
+			    Delete project
+			  	</a>
+			</button>
+		</div>
+		</div>
+	</section>
+
+{% endblock %}
+

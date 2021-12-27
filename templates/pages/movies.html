@@ -1,0 +1,15 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Casting Agency | Movies{% endblock %}
+{% block content %}
+<ul class="items">
+	{% for movie in movies %}
+	<li>
+		<a href="/movies/{{ movie.id }}">
+			<div class="item">
+				<h4>{{ movie.name }}</h4>
+			</div>
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+{% endblock %}
