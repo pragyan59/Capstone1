@@ -13,11 +13,11 @@ The app has a page where movie projects are listed and a page where actor profil
 
 #### How can I access the app?
 The casting app has been deployed to Heroku and is currently working at this link:</br> 
-<strong>[https://fsnd-capstone-cperacchio.herokuapp.com](https://fsnd-capstone-cperacchio.herokuapp.com/)</strong>
+<strong>https://caps-cast-agency.herokuapp.com/</strong>
 
 To log in, add /login to the url and enter one set of credentials shown below. To log out, just go to /logout.
 
-![homepage](https://github.com/cperacchio/fsnd-capstone/blob/main/static/img/new_landing_page.png?raw=true)
+
 
 ## Skills covered
 - Coding in Python 3
